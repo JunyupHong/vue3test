@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home">HOME
+    <hello></hello>
+    <HelloWorld/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Vue from "vue";
+import JunyupFirstPlugin from "junyup-first-plugin";
+import "junyup-first-plugin/dist/junyup-first-plugin.css";
+
+import HelloWorld from "../components/HelloWorld";
+
+Vue.use(JunyupFirstPlugin);
 
 export default {
   name: "home",
-  components: {
-    HelloWorld
-  }
+  components: { HelloWorld }
 };
 </script>
+
+<style scoped lang="sass">
+.home
+  width: 100vw
+  height: 100vh
+  background: rgba(0,0,0, 0.1)
+</style>
